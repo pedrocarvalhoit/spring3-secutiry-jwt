@@ -2,7 +2,8 @@
 2- Create UserRepository with findByUsername
 3 - Create JwtAuthenticationFilter to get the token from de header
     - doFilterInternal()
-4 - Create JwtService to get the user
+4 - Create Bean UserDetailsService
+5 - Create JwtService to get the user
     - extractUsername()
     - extractClaim()
     - extractAllClaims()
@@ -12,3 +13,16 @@
     - isTokenValid()
     - isTokenExpired()
     - extractExpirationDate()
+6 - Create Security Configuration class
+    - securityFilterChain()
+7 - On ApplicationConfig
+        - Create Bean Authentication Provider
+            - Configure userDtailService and password enconder
+        - Create Password Enconder bean
+        - Create Authentication Manager bean
+8 - Create Authentication Controller whit 2 endpoints
+    - to use in controller
+        - Create AuthenticationResponse (token DTO)
+        - Create RegisterRequest (User DTO)
+        - Create AuthenticationRequest (Authentication DTO)
+        - Create AuthenticationService
