@@ -1,0 +1,14 @@
+1 - Create User whit UserDetails and Enun Role
+2- Create UserRepository with findByUsername
+3 - Create JwtAuthenticationFilter to get the token from de header
+    - doFilterInternal()
+4 - Create JwtService to get the user
+    - extractUsername()
+    - extractClaim()
+    - extractAllClaims()
+    - getSignInkey()
+    - generateToken()
+    - generateToken() (simple)
+    - isTokenValid()
+    - isTokenExpired()
+    - extractExpirationDate()
